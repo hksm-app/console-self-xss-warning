@@ -2,12 +2,26 @@
   "name": "console-self-xss-warning",
   "version": "1.0.0",
   "description": "Show a self-XSS warning in the browser console.",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "author": "Hikasami",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hksm-app/console-self-xss-warning.git"
+    "url": "git+https://github.com/hksm-app/console-self-xss-warning.git"
   },
+  "bugs": {
+    "url": "https://github.com/hksm-app/console-self-xss-warning/issues"
+  },
+  "homepage": "https://github.com/hksm-app/console-self-xss-warning",
+  "keywords": [
+    "console-self-xss-warning",
+    "self-xss-warning",
+    "browser-console-warning",
+    "react-console-warning",
+    "nextjs-console-warning"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
