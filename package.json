@@ -1,0 +1,26 @@
+{
+  "name": "console-self-xss-warning",
+  "version": "1.0.0",
+  "description": "Show a self-XSS warning in the browser console.",
+  "license": "MIT",
+  "author": "Hikasami",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hksm-app/console-self-xss-warning.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

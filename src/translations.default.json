@@ -1,0 +1,126 @@
+{
+  "en": {
+    "title": "STOP!",
+    "message": "This is a browser feature for developers.\\nIf someone asks you to paste something here — it is a scam."
+  },
+  "es": {
+    "title": "¡ALTO!",
+    "message": "Esta es una función del navegador para desarrolladores.\\nSi alguien te pide que pegues algo aquí, es una estafa."
+  },
+  "fr": {
+    "title": "STOP !",
+    "message": "Ceci est une fonctionnalité du navigateur pour les développeurs.\\nSi quelqu'un vous demande de coller quelque chose ici, c'est une arnaque."
+  },
+  "de": {
+    "title": "STOPP!",
+    "message": "Dies ist eine Browserfunktion für Entwickler.\\nWenn dich jemand bittet, hier etwas einzufügen, ist das Betrug."
+  },
+  "it": {
+    "title": "STOP!",
+    "message": "Questa è una funzione del browser per sviluppatori.\\nSe qualcuno ti chiede di incollare qualcosa qui, è una truffa."
+  },
+  "pt": {
+    "title": "PARE!",
+    "message": "Este é um recurso do navegador para desenvolvedores.\\nSe alguém pedir para você colar algo aqui, é um golpe."
+  },
+  "nl": {
+    "title": "STOP!",
+    "message": "Dit is een browserfunctie voor ontwikkelaars.\\nAls iemand je vraagt hier iets te plakken, is dat oplichting."
+  },
+  "sv": {
+    "title": "STOPP!",
+    "message": "Det här är en webbläsarfunktion för utvecklare.\\nOm någon ber dig klistra in något här är det en bluff."
+  },
+  "no": {
+    "title": "STOPP!",
+    "message": "Dette er en nettleserfunksjon for utviklere.\\nHvis noen ber deg lime inn noe her, er det svindel."
+  },
+  "da": {
+    "title": "STOP!",
+    "message": "Dette er en browserfunktion for udviklere.\\nHvis nogen beder dig om at indsætte noget her, er det snyd."
+  },
+  "fi": {
+    "title": "SEIS!",
+    "message": "Tämä on selaimen ominaisuus kehittäjille.\\nJos joku pyytää sinua liittämään jotain tähän, se on huijaus."
+  },
+  "ru": {
+    "title": "СТОП!",
+    "message": "Это функция браузера для разработчиков.\\nЕсли кто-то просит вставить сюда что-то — это мошенничество."
+  },
+  "uk": {
+    "title": "СТОП!",
+    "message": "Це функція браузера для розробників.\\nЯкщо хтось просить вставити щось сюди — це шахрайство."
+  },
+  "pl": {
+    "title": "STOP!",
+    "message": "To funkcja przeglądarki dla deweloperów.\\nJeśli ktoś prosi, abyś wkleił coś tutaj, to oszustwo."
+  },
+  "cs": {
+    "title": "STOP!",
+    "message": "Toto je funkce prohlížeče pro vývojáře.\\nPokud vás někdo požádá, abyste sem něco vložili, je to podvod."
+  },
+  "sk": {
+    "title": "STOP!",
+    "message": "Toto je funkcia prehliadača pre vývojárov.\\nAk vás niekto požiada, aby ste sem niečo vložili, je to podvod."
+  },
+  "hu": {
+    "title": "ÁLLJ!",
+    "message": "Ez egy böngészőfunkció fejlesztőknek.\\nHa valaki arra kér, hogy ide másolj valamit, az átverés."
+  },
+  "ro": {
+    "title": "STOP!",
+    "message": "Aceasta este o funcție a browserului pentru dezvoltatori.\\nDacă cineva îți cere să lipești ceva aici, este o înșelătorie."
+  },
+  "bg": {
+    "title": "СТОП!",
+    "message": "Това е функция на браузъра за разработчици.\\nАко някой ви помоли да поставите нещо тук, това е измама."
+  },
+  "tr": {
+    "title": "DUR!",
+    "message": "Bu, geliştiriciler için bir tarayıcı özelliğidir.\\nBirisi buraya bir şey yapıştırmanı isterse, bu bir dolandırıcılıktır."
+  },
+  "el": {
+    "title": "ΣΤΟΠ!",
+    "message": "Αυτή είναι μια λειτουργία του προγράμματος περιήγησης για προγραμματιστές.\\nΑν κάποιος σας ζητήσει να επικολλήσετε κάτι εδώ, είναι απάτη."
+  },
+  "ar": {
+    "title": "توقف!",
+    "message": "هذه ميزة في المتصفح للمطورين.\\nإذا طلب منك أحد لصق شيء هنا، فهذه عملية احتيال."
+  },
+  "he": {
+    "title": "עצור!",
+    "message": "זו תכונת דפדפן למפתחים.\\nאם מישהו מבקש ממך להדביק משהו כאן, זו הונאה."
+  },
+  "hi": {
+    "title": "रुको!",
+    "message": "यह डेवलपर्स के लिए ब्राउज़र की सुविधा है।\\nयदि कोई आपसे यहां कुछ पेस्ट करने को कहे, तो यह धोखाधड़ी है।"
+  },
+  "th": {
+    "title": "หยุด!",
+    "message": "นี่เป็นฟีเจอร์ของเบราว์เซอร์สำหรับนักพัฒนา\\nหากมีคนขอให้คุณวางบางอย่างที่นี่ นี่คือการหลอกลวง"
+  },
+  "vi": {
+    "title": "DỪNG!",
+    "message": "Đây là một tính năng của trình duyệt dành cho lập trình viên.\\nNếu ai đó yêu cầu bạn dán thứ gì đó vào đây, đó là lừa đảo."
+  },
+  "id": {
+    "title": "BERHENTI!",
+    "message": "Ini adalah fitur browser untuk pengembang.\\nJika seseorang meminta Anda menempelkan sesuatu di sini, itu penipuan."
+  },
+  "ms": {
+    "title": "BERHENTI!",
+    "message": "Ini adalah ciri pelayar untuk pembangun.\\nJika seseorang meminta anda menampal sesuatu di sini, itu penipuan."
+  },
+  "zh": {
+    "title": "停止！",
+    "message": "这是给开发者使用的浏览器功能。\\n如果有人让你在这里粘贴内容，那是诈骗。"
+  },
+  "ja": {
+    "title": "停止！",
+    "message": "これは開発者向けのブラウザー機能です。\\nここに何かを貼り付けるよう求められたら、それは詐欺です。"
+  },
+  "ko": {
+    "title": "멈춰!",
+    "message": "이것은 개발자를 위한 브라우저 기능입니다.\\n여기에 무언가를 붙여 넣으라고 요청받으면 사기입니다."
+  }
+}
