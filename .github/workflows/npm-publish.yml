@@ -1,9 +1,6 @@
 name: Publish to npm
 
-on:
-  release:
-    types: [published]
-  workflow_dispatch:
+on: push
 
 permissions:
   contents: read
