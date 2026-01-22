@@ -1,5 +1,5 @@
 import defaultTranslations from "./translations.default.json";
-import { detectLanguage } from "./detectLanguage";
+import { detectLanguage, normalizeLanguageTag } from "./detectLanguage";
 
 export type Translation = {
   title: string;
@@ -8,19 +8,130 @@ export type Translation = {
   messageStyle?: string;
 };
 
+const BUILT_IN_LANGUAGES = [
+  "en",
+  "es",
+  "fr",
+  "de",
+  "it",
+  "pt",
+  "nl",
+  "sv",
+  "no",
+  "nb",
+  "da",
+  "fi",
+  "ru",
+  "uk",
+  "pl",
+  "cs",
+  "sk",
+  "hu",
+  "ro",
+  "bg",
+  "tr",
+  "el",
+  "ar",
+  "he",
+  "hi",
+  "th",
+  "vi",
+  "id",
+  "ms",
+  "zh",
+  "ja",
+  "ko",
+  "et",
+  "lt",
+  "lv",
+  "hr",
+  "sl",
+  "sr",
+  "mk",
+  "sq",
+  "is",
+  "ga",
+  "fa",
+  "ur",
+  "bn"
+] as const;
+
+export type BuiltInLanguage = (typeof BUILT_IN_LANGUAGES)[number];
+export type ForceLanguage = BuiltInLanguage | (string & {});
+
+/**
+ * Options for `showConsoleWarning`.
+ */
 export type Options = {
+  /**
+   * Override built-in translations per language.
+   */
   translations?: Record<string, Translation>;
-  forceLang?: string;
+  /**
+   * Force a specific BCP 47 language tag (e.g. "en", "en-US", "fr").
+   * Use `BuiltInLanguage` for autocomplete or pass any custom language code.
+   */
+  forceLang?: ForceLanguage;
+  /**
+   * Show only once per page load.
+   * 
+   * @default true
+   */
   once?: boolean;
+  /**
+   * Show only in production mode.
+   * 
+   * @default false
+   */
   productionOnly?: boolean;
+  /**
+   * Clear the console before logging.
+   * 
+   * @default false
+   */
   clearConsole?: boolean;
+  /**
+   * Env key(s) that control `productionOnly` with boolean values.
+   * 
+   * @default ["CONSOLE_SELF_XSS_WARNING_PRODUCTION_ONLY", "VITE_CONSOLE_SELF_XSS_WARNING_PRODUCTION_ONLY", "NEXT_PUBLIC_CONSOLE_SELF_XSS_WARNING_PRODUCTION_ONLY"]
+   */
   productionOnlyEnvKey?: string | string[];
+  /**
+   * Override warning behavior and styling defaults.
+   * 
+   * @default DEFAULT_WARNING_CONFIG
+   */
+  config?: Partial<WarningConfig>;
 };
 
-const DEFAULT_TITLE_STYLE = "color:red;font-size:48px;font-weight:bold;";
-const DEFAULT_MESSAGE_STYLE = "font-size:16px;";
-const DEFAULT_SPAM_INTERVAL_MS = 2000;
-const DEVTOOLS_SIZE_THRESHOLD_PX = 160;
+export type WarningConfig = {
+  /**
+   * Default title style.
+   * 
+   * @default "color:red;font-size:48px;font-weight:bold;"
+   */
+  defaultTitleStyle: string;
+  defaultMessageStyle: string;
+  /**
+   * Default spam interval in ms.
+   * 
+   * @default 2000
+   */
+  defaultSpamIntervalMs: number;
+  /**
+   * Threshold used to detect open devtools.
+   * 
+   * @default 160
+   */
+  devtoolsSizeThresholdPx: number;
+};
+
+export const DEFAULT_WARNING_CONFIG: WarningConfig = {
+  defaultTitleStyle: "color:red;font-size:48px;font-weight:bold;",
+  defaultMessageStyle: "font-size:16px;",
+  defaultSpamIntervalMs: 2000,
+  devtoolsSizeThresholdPx: 160
+};
 
 const GLOBAL_ONCE_FLAG = "__consoleSelfXssWarningShown__";
 
@@ -53,14 +164,14 @@ function setHasShown(): void {
   }
 }
 
-function isDevtoolsLikelyOpen(): boolean {
+function isDevtoolsLikelyOpen(config: WarningConfig): boolean {
   if (typeof window === "undefined") {
     return false;
   }
 
   return (
-    window.outerWidth - window.innerWidth > DEVTOOLS_SIZE_THRESHOLD_PX ||
-    window.outerHeight - window.innerHeight > DEVTOOLS_SIZE_THRESHOLD_PX
+    window.outerWidth - window.innerWidth > config.devtoolsSizeThresholdPx ||
+    window.outerHeight - window.innerHeight > config.devtoolsSizeThresholdPx
   );
 }
 
@@ -185,10 +296,12 @@ function resolveTranslation(
     (defaultTranslations as Record<string, Translation>).en || {
       title: "STOP!",
       message:
-        "This is a browser feature for developers.\nIf someone asks you to paste something here — it is a scam."
+        "This is a developer-only browser feature.\\nIf someone told you to paste code here, it is a scam.\\nPasting code can give attackers access to your account."
     };
 
-  const selected = translations[lang] || translations[lang.toLowerCase()];
+  const normalized = normalizeLanguageTag(lang);
+  const primary = normalized.split("-")[0] || normalized;
+  const selected = translations[normalized] || translations[primary];
   if (!selected) {
     return fallback;
   }
@@ -204,19 +317,22 @@ function resolveTranslation(
   };
 }
 
-function logWarning(payload: WarningPayload): void {
+function logWarning(payload: WarningPayload, config: WarningConfig): void {
   if (payload.clearConsole && typeof console.clear === "function") {
     console.clear();
   }
 
-  console.log(`%c${payload.title}`, payload.titleStyle || DEFAULT_TITLE_STYLE);
+  console.log(
+    `%c${payload.title}`,
+    payload.titleStyle || config.defaultTitleStyle
+  );
   console.log(
     `%c${payload.message}`,
-    payload.messageStyle || DEFAULT_MESSAGE_STYLE
+    payload.messageStyle || config.defaultMessageStyle
   );
 }
 
-function startSpam(payload: WarningPayload): void {
+function startSpam(payload: WarningPayload, config: WarningConfig): void {
   spamPayload = payload;
 
   if (typeof window === "undefined") {
@@ -227,21 +343,41 @@ function startSpam(payload: WarningPayload): void {
     return;
   }
 
-  if (isDevtoolsLikelyOpen()) {
-    logWarning(payload);
+  if (isDevtoolsLikelyOpen(config)) {
+    logWarning(payload, config);
     setHasShown();
   }
 
   spamIntervalId = window.setInterval(() => {
-    if (!spamPayload || !isDevtoolsLikelyOpen()) {
+    if (!spamPayload || !isDevtoolsLikelyOpen(config)) {
       return;
     }
 
-    logWarning(spamPayload);
+    logWarning(spamPayload, config);
     setHasShown();
-  }, DEFAULT_SPAM_INTERVAL_MS);
+  }, config.defaultSpamIntervalMs);
 }
 
+/**
+ * Log a self-XSS warning into the browser console.
+ *
+ * @example
+ * showConsoleWarning();
+ *
+ * @example
+ * showConsoleWarning({ forceLang: "fr", clearConsole: true });
+ *
+ * @example
+ * showConsoleWarning({
+ *   translations: {
+ *     en: {
+ *       title: "STOP!",
+ *       message: "This is a developer-only feature.\\nDo not paste anything here."
+ *     }
+ *   },
+ *   once: false
+ * });
+ */
 export function showConsoleWarning(options: Options = {}): void {
   if (!isBrowser()) {
     return;
@@ -253,8 +389,15 @@ export function showConsoleWarning(options: Options = {}): void {
     once = true,
     productionOnly,
     clearConsole = false,
-    productionOnlyEnvKey
+    productionOnlyEnvKey,
+    config: configOverrides
   } = options;
+
+  // Merge defaults with user-provided overrides.
+  const resolvedConfig: WarningConfig = {
+    ...DEFAULT_WARNING_CONFIG,
+    ...configOverrides
+  };
 
   const resolvedProductionOnly =
     productionOnly ?? getConfigProductionOnly(productionOnlyEnvKey) ?? false;
@@ -268,7 +411,7 @@ export function showConsoleWarning(options: Options = {}): void {
   }
 
   const translations = mergeTranslations(translationOverrides);
-  const lang = (forceLang || detectLanguage("en")).toLowerCase();
+  const lang = normalizeLanguageTag(forceLang || detectLanguage("en"));
   const { title, message, titleStyle, messageStyle } = resolveTranslation(
     translations,
     lang
@@ -283,11 +426,11 @@ export function showConsoleWarning(options: Options = {}): void {
   };
 
   if (!once) {
-    startSpam(payload);
+    startSpam(payload, resolvedConfig);
     return;
   }
 
-  logWarning(payload);
+  logWarning(payload, resolvedConfig);
 
   setHasShown();
 }

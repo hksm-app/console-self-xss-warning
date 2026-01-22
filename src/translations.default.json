@@ -1,126 +1,182 @@
 {
   "en": {
     "title": "STOP!",
-    "message": "This is a browser feature for developers.\\nIf someone asks you to paste something here — it is a scam."
+    "message": "This is a developer-only browser feature.\\nIf someone told you to paste code here, it is a scam.\\nPasting code can give attackers access to your account."
   },
   "es": {
     "title": "¡ALTO!",
-    "message": "Esta es una función del navegador para desarrolladores.\\nSi alguien te pide que pegues algo aquí, es una estafa."
+    "message": "Esta es una función del navegador para desarrolladores.\\nSi alguien te pide que pegues algo aquí, es una estafa.\\nPegar código puede dar a los atacantes acceso a tu cuenta."
   },
   "fr": {
     "title": "STOP !",
-    "message": "Ceci est une fonctionnalité du navigateur pour les développeurs.\\nSi quelqu'un vous demande de coller quelque chose ici, c'est une arnaque."
+    "message": "Ceci est une fonctionnalité du navigateur pour les développeurs.\\nSi quelqu'un vous demande de coller quelque chose ici, c'est une arnaque.\\nColler du code peut donner aux attaquants l'accès à votre compte."
   },
   "de": {
     "title": "STOPP!",
-    "message": "Dies ist eine Browserfunktion für Entwickler.\\nWenn dich jemand bittet, hier etwas einzufügen, ist das Betrug."
+    "message": "Dies ist eine Browserfunktion für Entwickler.\\nWenn dich jemand bittet, hier etwas einzufügen, ist das Betrug.\\nDas Einfügen von Code kann Angreifern Zugriff auf dein Konto geben."
   },
   "it": {
     "title": "STOP!",
-    "message": "Questa è una funzione del browser per sviluppatori.\\nSe qualcuno ti chiede di incollare qualcosa qui, è una truffa."
+    "message": "Questa è una funzione del browser per sviluppatori.\\nSe qualcuno ti chiede di incollare qualcosa qui, è una truffa.\\nIncollare codice può dare agli aggressori accesso al tuo account."
   },
   "pt": {
     "title": "PARE!",
-    "message": "Este é um recurso do navegador para desenvolvedores.\\nSe alguém pedir para você colar algo aqui, é um golpe."
+    "message": "Este é um recurso do navegador para desenvolvedores.\\nSe alguém pedir para você colar algo aqui, é um golpe.\\nColar código pode dar aos atacantes acesso à sua conta."
   },
   "nl": {
     "title": "STOP!",
-    "message": "Dit is een browserfunctie voor ontwikkelaars.\\nAls iemand je vraagt hier iets te plakken, is dat oplichting."
+    "message": "Dit is een browserfunctie voor ontwikkelaars.\\nAls iemand je vraagt hier iets te plakken, is dat oplichting.\\nCode plakken kan aanvallers toegang geven tot je account."
   },
   "sv": {
     "title": "STOPP!",
-    "message": "Det här är en webbläsarfunktion för utvecklare.\\nOm någon ber dig klistra in något här är det en bluff."
+    "message": "Det här är en webbläsarfunktion för utvecklare.\\nOm någon ber dig klistra in något här är det en bluff.\\nAtt klistra in kod kan ge angripare åtkomst till ditt konto."
   },
   "no": {
     "title": "STOPP!",
-    "message": "Dette er en nettleserfunksjon for utviklere.\\nHvis noen ber deg lime inn noe her, er det svindel."
+    "message": "Dette er en nettleserfunksjon for utviklere.\\nHvis noen ber deg lime inn noe her, er det svindel.\\nÅ lime inn kode kan gi angripere tilgang til kontoen din."
+  },
+  "nb": {
+    "title": "STOPP!",
+    "message": "Dette er en nettleserfunksjon for utviklere.\\nHvis noen ber deg lime inn noe her, er det svindel.\\nÅ lime inn kode kan gi angripere tilgang til kontoen din."
   },
   "da": {
     "title": "STOP!",
-    "message": "Dette er en browserfunktion for udviklere.\\nHvis nogen beder dig om at indsætte noget her, er det snyd."
+    "message": "Dette er en browserfunktion for udviklere.\\nHvis nogen beder dig om at indsætte noget her, er det snyd.\\nAt indsætte kode kan give angribere adgang til din konto."
   },
   "fi": {
     "title": "SEIS!",
-    "message": "Tämä on selaimen ominaisuus kehittäjille.\\nJos joku pyytää sinua liittämään jotain tähän, se on huijaus."
+    "message": "Tämä on selaimen ominaisuus kehittäjille.\\nJos joku pyytää sinua liittämään jotain tähän, se on huijaus.\\nKoodin liittäminen voi antaa hyökkääjille pääsyn tiliisi."
   },
   "ru": {
     "title": "СТОП!",
-    "message": "Это функция браузера для разработчиков.\\nЕсли кто-то просит вставить сюда что-то — это мошенничество."
+    "message": "Это функция браузера для разработчиков.\\nЕсли кто-то просит вставить сюда что-то — это мошенничество.\\nВставка кода может дать злоумышленникам доступ к вашему аккаунту."
   },
   "uk": {
     "title": "СТОП!",
-    "message": "Це функція браузера для розробників.\\nЯкщо хтось просить вставити щось сюди — це шахрайство."
+    "message": "Це функція браузера для розробників.\\nЯкщо хтось просить вставити щось сюди — це шахрайство.\\nВставлення коду може надати зловмисникам доступ до вашого облікового запису."
   },
   "pl": {
     "title": "STOP!",
-    "message": "To funkcja przeglądarki dla deweloperów.\\nJeśli ktoś prosi, abyś wkleił coś tutaj, to oszustwo."
+    "message": "To funkcja przeglądarki dla deweloperów.\\nJeśli ktoś prosi, abyś wkleił coś tutaj, to oszustwo.\\nWklejenie kodu może dać atakującym dostęp do Twojego konta."
   },
   "cs": {
     "title": "STOP!",
-    "message": "Toto je funkce prohlížeče pro vývojáře.\\nPokud vás někdo požádá, abyste sem něco vložili, je to podvod."
+    "message": "Toto je funkce prohlížeče pro vývojáře.\\nPokud vás někdo požádá, abyste sem něco vložili, je to podvod.\\nVložení kódu může dát útočníkům přístup k vašemu účtu."
   },
   "sk": {
     "title": "STOP!",
-    "message": "Toto je funkcia prehliadača pre vývojárov.\\nAk vás niekto požiada, aby ste sem niečo vložili, je to podvod."
+    "message": "Toto je funkcia prehliadača pre vývojárov.\\nAk vás niekto požiada, aby ste sem niečo vložili, je to podvod.\\nVloženie kódu môže dať útočníkom prístup k vášmu účtu."
   },
   "hu": {
     "title": "ÁLLJ!",
-    "message": "Ez egy böngészőfunkció fejlesztőknek.\\nHa valaki arra kér, hogy ide másolj valamit, az átverés."
+    "message": "Ez egy böngészőfunkció fejlesztőknek.\\nHa valaki arra kér, hogy ide másolj valamit, az átverés.\\nKód beillesztése hozzáférést adhat a támadóknak a fiókodhoz."
   },
   "ro": {
     "title": "STOP!",
-    "message": "Aceasta este o funcție a browserului pentru dezvoltatori.\\nDacă cineva îți cere să lipești ceva aici, este o înșelătorie."
+    "message": "Aceasta este o funcție a browserului pentru dezvoltatori.\\nDacă cineva îți cere să lipești ceva aici, este o înșelătorie.\\nLipirea codului poate oferi atacatorilor acces la contul tău."
   },
   "bg": {
     "title": "СТОП!",
-    "message": "Това е функция на браузъра за разработчици.\\nАко някой ви помоли да поставите нещо тук, това е измама."
+    "message": "Това е функция на браузъра за разработчици.\\nАко някой ви помоли да поставите нещо тук, това е измама.\\nПоставянето на код може да даде на нападатели достъп до вашия акаунт."
   },
   "tr": {
     "title": "DUR!",
-    "message": "Bu, geliştiriciler için bir tarayıcı özelliğidir.\\nBirisi buraya bir şey yapıştırmanı isterse, bu bir dolandırıcılıktır."
+    "message": "Bu, geliştiriciler için bir tarayıcı özelliğidir.\\nBirisi buraya bir şey yapıştırmanı isterse, bu bir dolandırıcılıktır.\\nKod yapıştırmak, saldırganların hesabınıza erişmesine neden olabilir."
   },
   "el": {
     "title": "ΣΤΟΠ!",
-    "message": "Αυτή είναι μια λειτουργία του προγράμματος περιήγησης για προγραμματιστές.\\nΑν κάποιος σας ζητήσει να επικολλήσετε κάτι εδώ, είναι απάτη."
+    "message": "Αυτή είναι μια λειτουργία του προγράμματος περιήγησης για προγραμματιστές.\\nΑν κάποιος σας ζητήσει να επικολλήσετε κάτι εδώ, είναι απάτη.\\nΗ επικόλληση κώδικα μπορεί να δώσει στους επιτιθέμενους πρόσβαση στον λογαριασμό σας."
   },
   "ar": {
     "title": "توقف!",
-    "message": "هذه ميزة في المتصفح للمطورين.\\nإذا طلب منك أحد لصق شيء هنا، فهذه عملية احتيال."
+    "message": "هذه ميزة في المتصفح للمطورين.\\nإذا طلب منك أحد لصق شيء هنا، فهذه عملية احتيال.\\nلصق الشفرة يمكن أن يمنح المهاجمين إمكانية الوصول إلى حسابك."
   },
   "he": {
     "title": "עצור!",
-    "message": "זו תכונת דפדפן למפתחים.\\nאם מישהו מבקש ממך להדביק משהו כאן, זו הונאה."
+    "message": "זו תכונת דפדפן למפתחים.\\nאם מישהו מבקש ממך להדביק משהו כאן, זו הונאה.\\nהדבקת קוד יכולה לתת לתוקפים גישה לחשבון שלך."
   },
   "hi": {
     "title": "रुको!",
-    "message": "यह डेवलपर्स के लिए ब्राउज़र की सुविधा है।\\nयदि कोई आपसे यहां कुछ पेस्ट करने को कहे, तो यह धोखाधड़ी है।"
+    "message": "यह डेवलपर्स के लिए ब्राउज़र की सुविधा है।\\nयदि कोई आपसे यहां कुछ पेस्ट करने को कहे, तो यह धोखाधड़ी है।\\nकोड पेस्ट करने से हमलावरों को आपके खाते तक पहुंच मिल सकती है।"
   },
   "th": {
     "title": "หยุด!",
-    "message": "นี่เป็นฟีเจอร์ของเบราว์เซอร์สำหรับนักพัฒนา\\nหากมีคนขอให้คุณวางบางอย่างที่นี่ นี่คือการหลอกลวง"
+    "message": "นี่เป็นฟีเจอร์ของเบราว์เซอร์สำหรับนักพัฒนา\\nหากมีคนขอให้คุณวางบางอย่างที่นี่ นี่คือการหลอกลวง\\nการวางโค้ดอาจทำให้ผู้โจมตีเข้าถึงบัญชีของคุณได้"
   },
   "vi": {
     "title": "DỪNG!",
-    "message": "Đây là một tính năng của trình duyệt dành cho lập trình viên.\\nNếu ai đó yêu cầu bạn dán thứ gì đó vào đây, đó là lừa đảo."
+    "message": "Đây là một tính năng của trình duyệt dành cho lập trình viên.\\nNếu ai đó yêu cầu bạn dán thứ gì đó vào đây, đó là lừa đảo.\\nViệc dán mã có thể cho kẻ tấn công quyền truy cập vào tài khoản của bạn."
   },
   "id": {
     "title": "BERHENTI!",
-    "message": "Ini adalah fitur browser untuk pengembang.\\nJika seseorang meminta Anda menempelkan sesuatu di sini, itu penipuan."
+    "message": "Ini adalah fitur browser untuk pengembang.\\nJika seseorang meminta Anda menempelkan sesuatu di sini, itu penipuan.\\nMenempelkan kode dapat memberi penyerang akses ke akun Anda."
   },
   "ms": {
     "title": "BERHENTI!",
-    "message": "Ini adalah ciri pelayar untuk pembangun.\\nJika seseorang meminta anda menampal sesuatu di sini, itu penipuan."
+    "message": "Ini adalah ciri pelayar untuk pembangun.\\nJika seseorang meminta anda menampal sesuatu di sini, itu penipuan.\\nMenampal kod boleh memberi penyerang akses kepada akaun anda."
   },
   "zh": {
     "title": "停止！",
-    "message": "这是给开发者使用的浏览器功能。\\n如果有人让你在这里粘贴内容，那是诈骗。"
+    "message": "这是给开发者使用的浏览器功能。\\n如果有人让你在这里粘贴内容，那是诈骗。\\n粘贴代码可能会让攻击者访问你的账户。"
   },
   "ja": {
     "title": "停止！",
-    "message": "これは開発者向けのブラウザー機能です。\\nここに何かを貼り付けるよう求められたら、それは詐欺です。"
+    "message": "これは開発者向けのブラウザー機能です。\\nここに何かを貼り付けるよう求められたら、それは詐欺です。\\nコードを貼り付けると、攻撃者があなたのアカウントにアクセスできる可能性があります。"
   },
   "ko": {
     "title": "멈춰!",
-    "message": "이것은 개발자를 위한 브라우저 기능입니다.\\n여기에 무언가를 붙여 넣으라고 요청받으면 사기입니다."
+    "message": "이것은 개발자를 위한 브라우저 기능입니다.\\n여기에 무언가를 붙여 넣으라고 요청받으면 사기입니다.\\n코드를 붙여 넣으면 공격자가 계정에 접근할 수 있습니다."
+  },
+  "et": {
+    "title": "STOPP!",
+    "message": "See on arendajatele mõeldud brauserifunktsioon.\\nKui keegi palub sul siia midagi kleepida, on see pettus.\\nKoodi kleepimine võib anda ründajatele ligipääsu sinu kontole."
+  },
+  "lt": {
+    "title": "STOP!",
+    "message": "Tai naršyklės funkcija, skirta kūrėjams.\\nJei kas nors prašo čia ką nors įklijuoti, tai apgaulė.\\nKodo įklijavimas gali suteikti užpuolikams prieigą prie jūsų paskyros."
+  },
+  "lv": {
+    "title": "STOP!",
+    "message": "Šī ir pārlūka funkcija izstrādātājiem.\\nJa kāds lūdz šeit kaut ko ielīmēt, tā ir krāpšana.\\nKoda ielīmēšana var dot uzbrucējiem piekļuvi jūsu kontam."
+  },
+  "hr": {
+    "title": "STOP!",
+    "message": "Ovo je značajka preglednika namijenjena razvojnim programerima.\\nAko vas netko traži da ovdje zalijepite nešto, to je prijevara.\\nLijepljenje koda može napadačima dati pristup vašem računu."
+  },
+  "sl": {
+    "title": "STOP!",
+    "message": "To je funkcija brskalnika za razvijalce.\\nČe vas kdo prosi, da sem prilepite nekaj, je to prevara.\\nLepljenje kode lahko napadalcem omogoči dostop do vašega računa."
+  },
+  "sr": {
+    "title": "СТОП!",
+    "message": "Ово је функција прегледача за програмере.\\nАко вам неко тражи да овде налепите нешто, то је превара.\\nЛепљење кода може омогућити нападачима приступ вашем налогу."
+  },
+  "mk": {
+    "title": "СТОП!",
+    "message": "Ова е функција на прелистувачот за програмери.\\nАко некој бара да залепите нешто тука, тоа е измама.\\nЛепењето код може да им даде пристап на напаѓачите до вашата сметка."
+  },
+  "sq": {
+    "title": "NDALO!",
+    "message": "Kjo është një veçori e shfletuesit për zhvilluesit.\\nNëse dikush ju kërkon të ngjitni diçka këtu, është mashtrim.\\nNgjitja e kodit mund t'u japë sulmuesve qasje në llogarinë tuaj."
+  },
+  "is": {
+    "title": "STOPP!",
+    "message": "Þetta er vafraeiginleiki fyrir forritara.\\nEf einhver biður þig um að líma eitthvað hér, þá er það svindl.\\nAð líma inn kóða getur veitt árásaraðilum aðgang að reikningnum þínum."
+  },
+  "ga": {
+    "title": "STOP!",
+    "message": "Gné de bhrabhsálaí do fhorbróirí atá anseo.\\nMá iarrann duine ort rud éigin a ghreamú anseo, is camscéim é.\\nIs féidir le cód a ghreamú rochtain a thabhairt d'ionsaitheoirí ar do chuntas."
+  },
+  "fa": {
+    "title": "توقف!",
+    "message": "این یک قابلیت مرورگر برای توسعه‌دهندگان است.\\nاگر کسی از شما خواست چیزی را اینجا جای‌گذاری کنید، این یک کلاهبرداری است.\\nجای‌گذاری کد می‌تواند به مهاجمان امکان دسترسی به حساب شما را بدهد."
+  },
+  "ur": {
+    "title": "رکیں!",
+    "message": "یہ ڈویلپرز کے لیے براؤزر کی ایک خصوصیت ہے۔\\nاگر کوئی آپ سے یہاں کچھ پیسٹ کرنے کو کہے، تو یہ دھوکہ ہے۔\\nکوڈ پیسٹ کرنا حملہ آوروں کو آپ کے اکاؤنٹ تک رسائی دے سکتا ہے۔"
+  },
+  "bn": {
+    "title": "থামুন!",
+    "message": "এটি ডেভেলপারদের জন্য একটি ব্রাউজার ফিচার।\\nযদি কেউ আপনাকে এখানে কিছু পেস্ট করতে বলে, এটি প্রতারণা।\\nকোড পেস্ট করা আক্রমণকারীদের আপনার অ্যাকাউন্টে প্রবেশাধিকার দিতে পারে।"
   }
 }

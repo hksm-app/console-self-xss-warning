@@ -1,6 +1,10 @@
+export function normalizeLanguageTag(tag: string): string {
+  return tag.trim().toLowerCase().replace(/_/g, "-");
+}
+
 export function detectLanguage(fallback = "en"): string {
   if (typeof navigator === "undefined") {
-    return fallback;
+    return normalizeLanguageTag(fallback);
   }
 
   const raw =
@@ -9,9 +13,9 @@ export function detectLanguage(fallback = "en"): string {
     fallback;
 
   if (!raw) {
-    return fallback;
+    return normalizeLanguageTag(fallback);
   }
 
-  const normalized = raw.toLowerCase().replace("_", "-");
-  return normalized.split("-")[0] || fallback;
+  const normalized = normalizeLanguageTag(raw);
+  return normalized || normalizeLanguageTag(fallback);
 }

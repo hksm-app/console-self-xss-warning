@@ -1,12 +1,13 @@
 {
   "name": "console-self-xss-warning",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Show a self-XSS warning in the browser console.",
   "publishConfig": {
     "access": "public"
   },
   "license": "MIT",
-  "author": "Hikasami",
+  "author": "Nikita Kononenko <nick@knko.me> (https://github.com/jadnast)",
+  "publisher": "Hikasami",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hksm-app/console-self-xss-warning.git"
