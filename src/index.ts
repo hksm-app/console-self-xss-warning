@@ -68,8 +68,8 @@ export type Options = {
    */
   translations?: Record<string, Translation>;
   /**
-   * Force a specific BCP 47 language tag (e.g. "en", "en-US", "fr").
-   * Use `BuiltInLanguage` for autocomplete or pass any custom language code.
+   * Force a specific {@link https://developer.mozilla.org/en-US/docs/Glossary/BCP_47_language_tag BCP 47 language tag}
+   * @example `en`, `en-US`, `fr`
    */
   forceLang?: ForceLanguage;
   /**
@@ -98,11 +98,12 @@ export type Options = {
   productionOnlyEnvKey?: string | string[];
   /**
    * Override warning behavior and styling defaults.
-   * 
-   * @default DEFAULT_WARNING_CONFIG
+   *
+   * @default {@link DEFAULT_WARNING_CONFIG}
    */
   config?: Partial<WarningConfig>;
 };
+
 
 export type WarningConfig = {
   /**
@@ -111,6 +112,11 @@ export type WarningConfig = {
    * @default "color:red;font-size:48px;font-weight:bold;"
    */
   defaultTitleStyle: string;
+  /**
+   * Default message style.
+   * 
+   * @default "font-size:16px;"
+   */
   defaultMessageStyle: string;
   /**
    * Default spam interval in ms.
@@ -126,6 +132,19 @@ export type WarningConfig = {
   devtoolsSizeThresholdPx: number;
 };
 
+/**
+ * Default warning configuration.
+ *
+ * @default
+ * ```ts
+ * {
+ *   defaultTitleStyle: "color:red;font-size:48px;font-weight:bold;",
+ *   defaultMessageStyle: "font-size:16px;",
+ *   defaultSpamIntervalMs: 2000,
+ *   devtoolsSizeThresholdPx: 160
+ * }
+ * ```
+ */
 export const DEFAULT_WARNING_CONFIG: WarningConfig = {
   defaultTitleStyle: "color:red;font-size:48px;font-weight:bold;",
   defaultMessageStyle: "font-size:16px;",
@@ -298,16 +317,23 @@ function resolveTranslation(
       message:
         "This is a developer-only browser feature.\\nIf someone told you to paste code here, it is a scam.\\nPasting code can give attackers access to your account."
     };
+  const normalizedFallback: Translation = {
+    ...fallback,
+    title: fallback.title ? fallback.title.replace(/\\n/g, "\n") : fallback.title,
+    message: fallback.message
+      ? fallback.message.replace(/\\n/g, "\n")
+      : fallback.message
+  };
 
   const normalized = normalizeLanguageTag(lang);
   const primary = normalized.split("-")[0] || normalized;
   const selected = translations[normalized] || translations[primary];
   if (!selected) {
-    return fallback;
+    return normalizedFallback;
   }
 
-  const rawTitle = selected.title || fallback.title;
-  const rawMessage = selected.message || fallback.message;
+  const rawTitle = selected.title || normalizedFallback.title;
+  const rawMessage = selected.message || normalizedFallback.message;
 
   return {
     title: rawTitle.replace(/\\n/g, "\n"),
