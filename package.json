@@ -1,6 +1,6 @@
 {
   "name": "console-self-xss-warning",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Show a self-XSS warning in the browser console.",
   "publishConfig": {
     "access": "public"
