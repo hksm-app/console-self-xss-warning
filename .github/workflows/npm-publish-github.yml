@@ -1,0 +1,39 @@
+name: Publish to GitHub Packages
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "package.json"
+
+jobs:
+  publish-to-github-packages:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@${{ github.repository_owner }}"
+
+      - name: Install environment
+        run: npm ci
+
+      - name: Build for release
+        id: build
+        run: npm run build
+
+      - name: Publish new version to GitHub Packages
+        id: publish-to-github-packages
+        if: steps.build.outcome == 'success'
+        run: |
+          echo "publishing"
+          npm publish --registry https://npm.pkg.github.com
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.G_TOKEN }}
