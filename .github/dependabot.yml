@@ -6,7 +6,7 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "14:00"
-      timezone: "PST"
+      timezone: "Canada/Pacific"
     open-pull-requests-limit: 6
     labels:
       - "dependencies"
