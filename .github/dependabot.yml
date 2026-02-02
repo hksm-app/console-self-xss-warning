@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "14:00"
+      timezone: "PST"
+    open-pull-requests-limit: 6
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "deps"
